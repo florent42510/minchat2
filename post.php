@@ -5,7 +5,7 @@ use \Colors\RandomColor;
 // Connexion à la base de données
 
 try{
-    $bdd = new PDO('mysql:host=localhost;dbname=Flochatbdd;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host='.(getenv('MYSQL_HOST') ?: 'localhost').';dbname=Flochatbdd;charset=utf8', 'root', '');
 
 }
 catch(Exception $e)

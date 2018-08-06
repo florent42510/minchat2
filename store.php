@@ -1,6 +1,6 @@
 <div id="ajax">
 <?php 
- try{  $bdd = new PDO('mysql:host=localhost;dbname=Flochatbdd;charset=utf8', 'root', '');
+ try{  $bdd = new PDO('mysql:host='.(getenv('MYSQL_HOST') ?: 'localhost').';dbname=Flochatbdd;charset=utf8', 'root', '');
 
 }catch(Exception $e)
 {
